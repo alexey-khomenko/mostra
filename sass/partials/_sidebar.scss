@@ -1,0 +1,122 @@
+#sidebar {
+  float: right;
+  width: 366px;
+  padding: 0 0 18px 44px;
+
+  @media (max-width: 989px) {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  h2 {
+    display: block;
+    margin: 0 0 20px 0;
+    font-family: $font-family-primary;
+    font-size: 22px;
+    font-weight: 600;
+    color: #446c95;
+  }
+
+  /***********************************************************************************/
+  .categories {
+    display: block;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      margin: 0 0 10px 0;
+
+      @media (max-width: 989px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      li {
+        display: block;
+        min-width: 160px;
+        margin: 0 0 10px 0;
+
+        @media (max-width: 989px) {
+          flex-grow: 1;
+          flex-basis: 180px;
+          margin-right: 10px;
+        }
+
+        @media (max-width: 629px) {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+          overflow: hidden;
+          padding: 14px 12px 14px 12px;
+          font-family: $font-family-secondary;
+          font-size: 12px;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: $blue-text;
+          background-color: $blue-bg;
+          border: 1px solid $blue-border;
+
+          &:hover {
+            color: $blue-border;
+            background-color: $blue-text;
+          }
+        }
+      }
+    }
+  }
+
+  /***********************************************************************************/
+  .latest {
+    display: block;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 351px) {
+        flex-direction: column;
+      }
+
+      li {
+        display: block;
+        margin: 0 14px 14px 0;
+
+        @media (max-width: 351px) {
+          margin-right: 0;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+
+          .img-box {
+            display: block;
+            height: 154px;
+            width: 154px;
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

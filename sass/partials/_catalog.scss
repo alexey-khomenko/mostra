@@ -1,0 +1,119 @@
+#catalog {
+  font-family: $font-family-primary;
+  font-weight: 700;
+  font-size: 18px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    @media (max-width: 535px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    li {
+      display: block;
+      flex-basis: 260px;
+      flex-grow: 1;
+      padding: 0 15px 34px 0;
+      margin: 0 0 26px 0;
+      border-bottom: 1px dotted #b1c7de;
+
+      &:nth-child(3n) {
+        padding-right: 0;
+        flex-basis: 245px;
+
+        @media (max-width: 795px) {
+          padding-right: 15px;
+          flex-basis: 262px;
+        }
+
+        @media (max-width: 793px) {
+          flex-basis: 260px;
+        }
+      }
+
+      &:nth-child(2n) {
+        @media (max-width: 795px) {
+          padding-right: 0;
+          flex-basis: 247px;
+        }
+
+        @media (max-width: 793px) {
+          flex-basis: 245px;
+        }
+      }
+
+      @media (max-width: 535px) {
+        & {
+          padding-right: 0;
+          flex-basis: auto;
+        }
+      }
+
+      h4 {
+        display: block;
+        max-width: 310px;
+        margin: 0 auto 9px auto;
+
+        a {
+          display: inline-block;
+          margin: 0;
+          color: #136392;
+
+          &:hover {
+            color: #f37f3f;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        max-width: 310px;
+        margin: 0 auto 11px auto;
+
+        .img-box {
+          display: block;
+          overflow: hidden;
+          max-height: 310px;
+          max-width: 310px;
+
+          img {
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .text {
+        display: block;
+        overflow: hidden;
+        max-width: 310px;
+        margin: 0 auto 0 auto;
+
+        .price {
+          float: left;
+          color: #444445;
+
+          span {
+            color: #4c9242;
+          }
+        }
+
+        .zip {
+          float: right;
+          color: #444445;
+
+          span {
+            color: #676767;
+          }
+        }
+      }
+    }
+  }
+}

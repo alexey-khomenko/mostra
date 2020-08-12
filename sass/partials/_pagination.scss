@@ -1,0 +1,95 @@
+#pagination {
+  padding: 10px 0;
+
+  .background {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e2ecf4;
+    border: 1px solid #cde1f1;
+
+    a {
+      display: block;
+      min-width: 48px;
+      padding: 0 18px;
+      font-family: $font-family-primary;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 48px;
+      color: #fff;
+      background-color: #538bc5;
+
+      &:hover, &.active {
+        background-color: #375c84;
+      }
+
+      &.active, &.disabled {
+        cursor: default;
+      }
+
+      &.disabled {
+        background-color: #acbece;
+      }
+    }
+
+    .button-prev, .button-next {
+      display: block;
+      width: 170px;
+      padding: 9px;
+
+      a {
+        display: inline-block;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+
+        @media (max-width: 413px) {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .button-prev {
+      text-align: left;
+
+      @media (max-width: 767px) {
+        width: 50%;
+        order: 1;
+      }
+    }
+
+    .button-next {
+      text-align: right;
+
+      @media (max-width: 767px) {
+        width: 50%;
+        order: 2;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 6px;
+        order: 3;
+      }
+
+      li {
+        display: block;
+        margin: 3px;
+      }
+    }
+  }
+}

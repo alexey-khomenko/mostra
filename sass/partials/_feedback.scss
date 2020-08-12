@@ -1,0 +1,84 @@
+#feedback {
+  display: block;
+  margin: 0 0 36px 0;
+
+  form {
+    display: block;
+    max-width: 594px;
+    margin: 0 auto 0 auto;
+
+    fieldset {
+      display: block;
+
+      .row {
+        display: block;
+        overflow: hidden;
+        margin: 0 0 12px 0;
+
+        &:first-child {
+          margin-bottom: 0;
+        }
+
+        .left, .right {
+          width: 290px;
+          margin: 0 0 12px 0;
+
+          @media (max-width: 629px) {
+            width: 100%;
+          }
+        }
+
+        .left {
+          float: left;
+        }
+
+        .right {
+          float: right;
+        }
+
+        label {
+          display: block;
+          margin: 0 0 6px 0;
+          font-family: $font-family-secondary;
+          font-weight: 600;
+          font-size: 14px;
+          text-transform: capitalize;
+          color: $blue-text;
+        }
+
+        input, textarea {
+          display: block;
+          width: 100%;
+          padding: 0 9px 0 9px;
+          line-height: 36px;
+          color: $blue-text;
+          background-color: $blue-bg;
+          border: 1px solid $blue-border;
+        }
+
+        textarea {
+          height: 270px;
+          resize: none;
+        }
+
+        button {
+          @include form-button;
+          float: right;
+          width: 138px;
+
+          @media (max-width: 989px) {
+            width: 290px;
+          }
+
+          @media (max-width: 629px) {
+            width: 50%;
+          }
+
+          @media (max-width: 479px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

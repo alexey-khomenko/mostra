@@ -1,0 +1,18 @@
+@mixin form-button {
+  display: block;
+  font-family: $font-family-primary;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 36px;
+  color: #5f7a58;
+  background-color: #c1ddb8;
+  border: 1px solid #9fed7f;
+
+  &:hover {
+    color: #c1ddb8;
+    background-color: #5f7a58;
+    cursor: pointer;
+  }
+}

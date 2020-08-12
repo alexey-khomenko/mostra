@@ -1,0 +1,76 @@
+/* wrapper */
+#wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+main {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px dotted #adc5e0;
+}
+
+.layout {
+  position: relative;
+  margin: 0 auto;
+}
+
+#content {
+  position: relative;
+}
+
+#sidebar {
+  position: relative;
+}
+
+aside {
+  position: relative;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  margin: 0 0 0;
+  padding: 0 0 0;
+}
+
+/***********************************************************************************/
+.layout {
+  overflow: hidden;
+  width: 960px;
+
+  @media (max-width: 989px) {
+    & {
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}
+
+#content {
+  float: left;
+  width: 594px;
+
+  @media (max-width: 989px) {
+    & {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  &.home {
+    float: none;
+    width: 100%;
+  }
+}
